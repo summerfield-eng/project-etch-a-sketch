@@ -42,9 +42,12 @@ reseteBtn.addEventListener("click", () => {
 });
 
 function calcContainerWidthHeight(num) {
+  const h = container.clientHeight / num;
+  const w = container.clientWidth / num;
+  
   container.querySelectorAll(".square").forEach((item) => {
-    item.style.height = container.clientHeight / num + "px";
-    item.style.width = container.clientWidth / num + "px";
+    item.style.height = h + "px";
+    item.style.width = w + "px";
   });
 }
 
